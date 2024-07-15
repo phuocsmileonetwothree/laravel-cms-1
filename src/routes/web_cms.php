@@ -16,21 +16,6 @@ use App\Http\Controllers\CMS\API\TemplateController;
 use App\Models\CMS\Page;
 // Import Below Here
 
-
-
-
-use App\Http\Controllers\CMS\API\Item\ProductController;
-
-
-use App\Http\Controllers\CMS\API\Item\FormContactController;
-
-use App\Http\Controllers\CMS\API\Item\FormTestController;
-
-use App\Http\Controllers\CMS\API\Item\FormSaleController;
-
-use App\Http\Controllers\CMS\API\Item\PostController;
-
-use App\Http\Controllers\CMS\API\Item\DịchVụController;
 // const BREAKPOINT_USE = 'DO NOT DELETE OR MOVE';
 
 
@@ -68,37 +53,6 @@ Route::prefix('cms/api')->name('cms.api.')->group(function () {
     ]);
 
 
-    
-Route::name('item.')->prefix('item')->group(function () {
-    Route::get('product/category', [ProductController::class, 'category'])->name('product.category');
-    Route::apiResources([
-        'product' => ProductController::class,
-    ]);
-});
-
-Route::name('item.')->prefix('item')->group(function () {
-    Route::get('form-contact/category', [FormContactController::class, 'category'])->name('form-contact.category');
-    Route::post('form-contact/store-and-send-mail', [FormContactController::class, 'storeAndSendMail'])->name('form-contact.store-and-send-mail');
-    Route::apiResources([
-        'form-contact' => FormContactController::class,
-    ]);
-});
-
-
-Route::name('item.')->prefix('item')->group(function () {
-    Route::get('form-sale/category', [FormSaleController::class, 'category'])->name('form-sale.category');
-    Route::post('form-sale/store-and-send-mail', [FormSaleController::class, 'storeAndSendMail'])->name('form-sale.store-and-send-mail');
-    Route::apiResources([
-        'form-sale' => FormSaleController::class,
-    ]);
-});
-
-Route::name('item.')->prefix('item')->group(function () {
-    Route::get('post/category', [PostController::class, 'category'])->name('post.category');
-    Route::apiResources([
-        'post' => PostController::class,
-    ]);
-});
 // const BREAKPOINT_ROUTE = 'DO NOT DELETE OR MOVE';
 });
 
