@@ -63,6 +63,7 @@ class LaravelCmsServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/routes/web_cms.php' => base_path('routes/web_cms.php'),
         ], 'laravel-cms-web-cms');
+        // $this->loadRoutesFrom(__DIR__.'/routes/web_cms.php');
 
         // Publish the entire cms directory and specific views
         $this->publishes([
