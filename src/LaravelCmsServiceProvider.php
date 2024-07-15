@@ -28,6 +28,11 @@ class LaravelCmsServiceProvider extends ServiceProvider
             __DIR__.'/database/migrations/CMS' => database_path('migrations/CMS'),
         ], 'laravel-cms-migrations');
 
+        // Publish seeders
+        $this->publishes([
+            __DIR__.'/database/seeders/CMS' => database_path('seeders/CMS'),
+        ], 'laravel-cms-seeders');
+
         // Publish Helpers directory and all its contents recursively
         $this->publishes([
             __DIR__.'/Helpers/CMS' => base_path('app/Helpers/CMS'),
