@@ -182,50 +182,6 @@
         </div>
 
     </div>
-
-
-    <div class="intro-y border-b border-dashed">
-        <div class="transition duration-200 ease-in-out transform cursor-pointer inline-block sm:block border-b border-slate-200/60 dark:border-darkmode-400 hover:scale-[1.02] hover:relative hover:z-20 hover:shadow-md hover:border-0 hover:rounded bg-white text-slate-800 dark:text-slate-300 dark:bg-darkmode-600">
-            <div class="flex px-5 py-3">
-                <div class="mr-5 flex w-72 flex-none items-center">
-                    <input checked="" type="checkbox" class="transition-all duration-100 ease-in-out shadow-sm cursor-pointer rounded focus:ring-4 focus:ring-offset-0 focus:ring-primary focus:ring-opacity-20 dark:bg-darkmode-800 dark:border-transparent dark:focus:ring-slate-700 dark:focus:ring-opacity-50 [&amp;[type='radio']]:checked:bg-primary [&amp;[type='radio']]:checked:border-primary [&amp;[type='radio']]:checked:border-opacity-10 [&amp;[type='checkbox']]:checked:bg-primary [&amp;[type='checkbox']]:checked:border-primary [&amp;[type='checkbox']]:checked:border-opacity-10 [&amp;:disabled:not(:checked)]:bg-slate-100 [&amp;:disabled:not(:checked)]:cursor-not-allowed [&amp;:disabled:not(:checked)]:dark:bg-darkmode-800/50 [&amp;:disabled:checked]:opacity-70 [&amp;:disabled:checked]:cursor-not-allowed [&amp;:disabled:checked]:dark:bg-darkmode-800/50 flex-none border-slate-400 checked:border-primary">
-                    <a class="ml-4 flex h-5 w-5 flex-none items-center justify-center text-slate-400" href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" class="lucide lucide-star stroke-1.5 h-4 w-4"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                    </a>
-                    <a class="ml-2 flex h-5 w-5 flex-none items-center justify-center text-slate-400" href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="bookmark" class="lucide lucide-bookmark stroke-1.5 h-4 w-4"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path></svg>
-                    </a>
-                    <div class="image-fit relative ml-5 h-6 w-6 flex-none">
-                        <img class="rounded-full" src="" alt="Midone - Tailwind Admin Dashboard Template">
-                    </div>
-                    <div class="ml-3 truncate font-medium">
-                        Al Pacino
-                    
-                        Al Pacino
-                    
-                        Al Pacino
-                    
-                        Al Pacino
-                    
-                        Al Pacino
-                    
-                        Al Pacino
-                    
-                        Al Pacino
-                    </div>
-                </div>
-                <div class="w-64 truncate sm:w-auto">
-                    <span class="ml-3 truncate font-medium">
-                        There are many variations of passages of Lorem Ips
-                    </span>
-                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomi
-                </div>
-                <div class="pl-10 ml-auto whitespace-nowrap font-medium">
-                    05:09 AM
-                </div>
-            </div>
-        </div>
-    </div>
     <Modal :show="show.deleteModalPreview" @hidden="show.deleteModalPreview = false">
         <ModalBody class="p-0">
         <div class="p-5 text-center">
