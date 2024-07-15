@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cms_resource_types', function (Blueprint $table) {
+        Schema::create('cms_category_types', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('title');
             $table->text('desc')->nullable();
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('cms_resource_types');
+        Schema::dropIfExists('cms_category_types');
     }
 };
