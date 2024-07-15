@@ -14,18 +14,6 @@ import routeOther from './category/other/main.js';
 // -------------------
 
 
-
-
-
-import routeProduct from './item/product/main.js'
-
-import routeFormContact from './item/form-contact/main.js'
-
-
-import routeFormSale from './item/form-sale/main.js'
-
-import routePost from './item/post/main.js'
-
 // CONST BREAKPOINT_IMPORT = true;
 const routes = [
   { path: '/cms/', component: CollectionIndex, name: 'home' },
@@ -40,19 +28,6 @@ routes.push(...routeForm);
 routes.push(...routeGlobal);
 routes.push(...routeNavigation);
 routes.push(...routeOther);
-
-
-
-
-
-routes.push(...routeProduct);
-
-routes.push(...routeFormContact);
-
-
-routes.push(...routeFormSale);
-
-routes.push(...routePost);
 
 // CONST BREAKPOINT_PUSH = true;
 

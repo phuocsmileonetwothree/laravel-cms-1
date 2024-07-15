@@ -25,11 +25,8 @@ class LaravelCmsServiceProvider extends ServiceProvider
     {
         // Publish migrations
         $this->publishes([
-            __DIR__.'/database/migrations/CMS/Sample' => database_path('migrations'),
+            __DIR__.'/database/migrations/CMS' => database_path('migrations/CMS'),
         ], 'laravel-cms-migrations');
-        
-        // Load migrations
-        $this->loadMigrationsFrom(__DIR__.'/database/migrations/CMS');
 
         // Publish Helpers directory and all its contents recursively
         $this->publishes([
@@ -38,11 +35,11 @@ class LaravelCmsServiceProvider extends ServiceProvider
 
         // Publish Controllers directory for CMS and Frontend
         $this->publishes([
-            __DIR__.'/Http/Controllers' => app_path('Http/Controllers/CMS'),
+            __DIR__.'/Http/Controllers/CMS' => app_path('Http/Controllers/CMS'),
         ], 'laravel-cms-controllers');
         
         $this->publishes([
-            __DIR__.'/Http/Controllers' => app_path('Http/Controllers/Frontend'),
+            __DIR__.'/Http/Controllers/Frontend' => app_path('Http/Controllers/Frontend'),
         ], 'laravel-cms-controllers');
 
         // Publish Mail directory and all its contents recursively
@@ -63,19 +60,18 @@ class LaravelCmsServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/routes/web_cms.php' => base_path('routes/web_cms.php'),
         ], 'laravel-cms-web-cms');
-        // $this->loadRoutesFrom(__DIR__.'/routes/web_cms.php');
 
         // Publish the entire cms directory and specific views
         $this->publishes([
-            __DIR__.'/resources/cms' => resource_path('vendor/laravel-cms/cms'),
+            __DIR__.'/resources/cms' => resource_path('cms'),
         ], 'laravel-cms-resources-cms');
         
         $this->publishes([
-            __DIR__.'/resources/views/cms' => resource_path('views/vendor/laravel-cms/cms'),
+            __DIR__.'/resources/views/cms' => resource_path('views/cms'),
         ], 'laravel-cms-views-cms');
         
         $this->publishes([
-            __DIR__.'/resources/views/frontend' => resource_path('views/vendor/laravel-cms/frontend'),
+            __DIR__.'/resources/views/frontend' => resource_path('views/frontend'),
         ], 'laravel-cms-views-frontend');
 
         // Publish PostCSS, Tailwind, Vite, and Vue configuration files
@@ -98,5 +94,12 @@ class LaravelCmsServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/package.json' => base_path('package.json'),
         ], 'laravel-cms-package-json');
+
+
+        
+        // Load migrations
+        $this->loadMigrationsFrom(__DIR__.'/database/migrations/CMS');
+        // $this->loadRoutesFrom(__DIR__.'/routes/web_cms.php');
+
     }
 }
