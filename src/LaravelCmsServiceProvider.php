@@ -93,5 +93,9 @@ class LaravelCmsServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/vue.config.js' => base_path('vue.config.js'),
         ], 'laravel-cms-vue');
+
+        $this->publishes([
+            __DIR__.'/package.json' => base_path('package.json'),
+        ], 'laravel-cms-package-json');
     }
 }
