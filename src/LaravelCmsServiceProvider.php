@@ -79,6 +79,10 @@ class LaravelCmsServiceProvider extends ServiceProvider
             __DIR__.'/resources/views/frontend' => resource_path('views/frontend'),
         ], 'laravel-cms-views-frontend');
 
+        $this->publishes([
+            __DIR__ . '/public/frontend' => public_path('frontend'),
+        ], 'laravel-cms-asset-frontend');
+
         // Publish PostCSS, Tailwind, Vite, and Vue configuration files
         $this->publishes([
             __DIR__.'/postcss.config.js' => base_path('postcss.config.js'),
@@ -99,6 +103,8 @@ class LaravelCmsServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/package.json' => base_path('package.json'),
         ], 'laravel-cms-package-json');
+
+
 
 
         

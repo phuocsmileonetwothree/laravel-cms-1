@@ -31,6 +31,9 @@ php artisan vendor:publish --tag=laravel-cms-views-cms
 # Publish frontend views
 php artisan vendor:publish --tag=laravel-cms-views-frontend
 
+# Publish asset view frontend
+php artisan vendor:publish --tag=laravel-cms-asset-frontend
+
 # Publish PostCSS config
 php artisan vendor:publish --tag=laravel-cms-postcss
 
