@@ -3,8 +3,8 @@
     "description": "A sample Laravel package for Content Manager System",
     "type": "library",
     "require": {
-        "php": "^8.1",
-        "illuminate/support": "^10.0",
+        "php": ">=8.1",
+        "illuminate/support": ">=10.0",
         "unisharp/laravel-filemanager": "^2.0"
     },
     "autoload": {
