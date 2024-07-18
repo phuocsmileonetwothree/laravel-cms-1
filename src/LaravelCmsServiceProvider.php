@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpCorp\LaravelCms;
+namespace PHPCorp\LaravelCms;
 
 use Illuminate\Support\ServiceProvider;
 

@@ -11,7 +11,7 @@ composer create-project --prefer-dist laravel/laravel new-project
 ],
 ## Add dev repo for test
 "require": {
-    "phpphamhuuphuoc/laravel-cms": "dev-main"
+    "PHPCorp/laravel-cms": "*"
 },
 ## Update composer.lock
 composer update

@@ -1,5 +1,5 @@
 {
-    "name": "phpphamhuuphuoc/laravel-cms",
+    "name": "PHPCorp/laravel-cms",
     "description": "A sample Laravel package for Content Manager System",
     "type": "library",
     "require": {
@@ -9,13 +9,13 @@
     },
     "autoload": {
         "psr-4": {
-            "PhpCorp\\LaravelCms\\": "src/"
+            "PHPCorp\\LaravelCms\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "PhpCorp\\LaravelCms\\LaravelCmsServiceProvider"
+                "PHPCorp\\LaravelCms\\LaravelCmsServiceProvider"
             ]
         }
     }
