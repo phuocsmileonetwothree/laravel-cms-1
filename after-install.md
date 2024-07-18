@@ -57,11 +57,6 @@ php artisan vendor:publish --tag=laravel-cms-package-json --force
             CategoryTypeSeeder::class,
         ]);
 
-# Comment route '/' in web.php
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 # Autoload Helpers vào file composer.json
 "files": [
     "app/Helpers/CMS/Dispatch.php",
@@ -90,6 +85,11 @@ php artisan db:seed
         View::share('globalData', [
             'menu' => Page::where('parent_id', NULL)->with('childrens')->get(),
         ]);
+
+# Comment route '/' in web.php
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 # Run assets
 npm run build
