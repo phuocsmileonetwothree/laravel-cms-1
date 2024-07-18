@@ -18,7 +18,7 @@ composer update
 composer install
 # Publish all assets from Laravel CMS (need --force for override)
 php artisan vendor:publish --tag=laravel-cms-all --force
-# Step 3
+# Run migrate , helper , service provider , build assets, starting serve
 ## Thêm các câu lệnh vào file database\seeders\DatabaseSeeder.php
 use Database\Seeders\CMS\CategoryTypeSeeder;
 use Database\Seeders\CMS\TemplateSeeder;
@@ -48,7 +48,7 @@ npm i
 npm update
 npm install vite --save-dev
 
-## Thêm các câu lệnh vào app\Providers\AppServiceProvider.php
+## Thêm các câu lệnh vào app\Providers\AppServiceProvider.php function boot()
 use App\Models\CMS\Page;
 use Illuminate\Support\Facades\View;
 $this->loadRoutesFrom(base_path('routes/web_cms.php'));
@@ -67,3 +67,11 @@ npm run dev
 
 ## Starting Serve
 php artisan serve
+
+# Follow URL CMS Admin
+http://example/cms/
+http://127.0.0.1:8000/cms
+
+# Create page home and follow URL end point for user
+http://example/
+http://127.0.0.1:8000
