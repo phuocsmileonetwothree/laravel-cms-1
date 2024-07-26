@@ -553,7 +553,7 @@ export default {
                 data: this.fields,
             }
             axios
-                .post(`${this.baseURL}/cms/api/design/`, data)
+                .post(`${this.baseURL}/cms/api/design`, data)
                 .then((response) => {
                     console.log('Response from server:', response.data);
                     if (response.data.success == true) {

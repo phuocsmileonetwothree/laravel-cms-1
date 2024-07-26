@@ -404,7 +404,7 @@ export default {
             tmp_modules = this.form.modules;
             this.form.modules = this.page_moduleIDs;
             axios
-                .post(`${this.baseURL}/${this.route.nameAPI}/`, this.form)
+                .post(`${this.baseURL}/${this.route.nameAPI}`, this.form)
                 .then((response) => {
                 console.log('Response from server:', response.data);
                 if (response.data.success) {

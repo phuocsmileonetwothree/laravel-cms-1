@@ -1,5 +1,5 @@
 {
-    "name": "PHPCorp/laravel-cms",
+    "name": "phpcorp/laravel-cms",
     "description": "A sample Laravel package for Content Manager System",
     "type": "library",
     "require": {

@@ -133,7 +133,7 @@ export default {
         },
         store() {
             axios
-                .post(`${this.baseURL}/${this.route.nameAPI}/`, this.form)
+                .post(`${this.baseURL}/${this.route.nameAPI}`, this.form)
                 .then((response) => {
                 console.log('Response from server:', response.data);
                 if (response.data.success) {
