@@ -23,9 +23,9 @@ class SampleModel extends Model
     public function getAll($cond, $paginate = true, $paramsPaginate) 
     {
         $query = $this::query();
-        // Nếu có điều kiện title được truyền vào từ bên ngoài
-        if (isset($cond['title'])) {
-            $query->where('title', 'like', '%' . $cond['title'] . '%');
+        // Nếu có điều kiện email được truyền vào từ bên ngoài
+        if (isset($cond['email'])) {
+            $query->where('email', 'like', '%' . $cond['email'] . '%');
         }
         // Kiểm tra nếu cần phân trang
         if (isset($paginate)) {

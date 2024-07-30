@@ -53,7 +53,7 @@ use App\Models\CMS\Page;
 use Illuminate\Support\Facades\View;
 $this->loadRoutesFrom(base_path('routes/web_cms.php'));
 View::share('globalData', [
-    'menu' => Page::where('parent_id', NULL)->with('childrens')->get(),
+    'menu' => Page::where('parent_id', NULL)->with('childrens')->orderBy('order')->get(),
 ]);
 
 ## Comment route '/' in routes\web.php

@@ -25,14 +25,38 @@ $pages = Page::with('template')->get();
 
 // Đăng ký route cho từng trang
 foreach ($pages as $page) {
-    if ($page->is_homepage) {
+    if ($page->template_id == 3) {
         Route::get('/', function () use ($page) {
             return dispatchPage($page);
         })->name('cms.page.home');
-    } else {
+    }else if($page->template_id == 5) {
+
+        Route::get("/{$page->slug}", function () use ($page) {
+            return dispatchPage($page);
+        })->name("cms.page.{$page->slug}");
+        Route::post("/{$page->slug}/store", function () use ($page) {
+            return dispatchPageContact($page);
+        })->name("cms.page.{$page->slug}.store");
+
+    }else if($page->template_id == 6) {
+
+        Route::get("/{$page->slug}", function () use ($page) {
+            return dispatchPage($page);
+        })->name("cms.page.{$page->slug}");
+        $category = Category::findOrFail($page->handle_id);
+        $slugCategory = slugify($category->title);
+        Route::get("/{itemSlug}-{$slugCategory}{categoryId}", function ($itemSlug, $categoryId) use ($page) {
+            return dispatchItemPage($itemSlug, $categoryId, $page);
+        })->where([
+            'itemSlug' => '.*', // Cho phép slug dài và có dấu gạch nối
+            'parentId' => '[0-9]+' // ID của danh mục cha là số
+        ])->name('cms.page.item');
+
+    }
+    else {
         Route::get('/' . $page->slug, function () use ($page) {
             return dispatchPage($page);
-        })->name('cms.page.'.$page->slug);
+        })->name("cms.page.item");
     }
 }
 
